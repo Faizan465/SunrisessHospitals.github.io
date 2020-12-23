@@ -1,0 +1,176 @@
+@model  Enquir
+@Html.AntiForgeryToken();
+			<div id="breadcrumb" class="division">
+				<div class="container">
+					<div class="row">						
+						<div class="col">
+							<div class=" breadcrumb-holder">
+
+								<!-- Breadcrumb Nav -->
+								<nav aria-label="breadcrumb">
+								  	<ol class="breadcrumb">
+								    	<li class="breadcrumb-item"><a asp-Controller ="Home" asp-Action="Index">Home</a></li>
+								    	<li class="breadcrumb-item active" aria-current="page">Contact Us</li>
+								  	</ol>
+								</nav>
+
+								<!-- Title -->
+								<h4 class="h4-sm steelblue-color">Contact Us</h4>
+
+							</div>
+						</div>
+					</div>  <!-- End row -->	
+				</div>	<!-- End container -->		
+			</div>	<!-- END BREADCRUMB -->	
+
+
+
+
+			<!-- CONTACTS-2
+			============================================= -->
+			<section id="contacts-2" class="wide-60 contacts-section division">				
+				<div class="container">
+					<div class="row">	
+
+
+						<!-- CONTACTS INFO -->
+				 		<div class="col-lg-7">
+
+				 			<!-- Title-->
+				 			<h4 class="h4-md steelblue-color">Have a Question? We Review and Accept Patients Requests on 24/7 </h4>
+
+				 			<!-- Text-->
+				 			<p class="contact-notice">Give us a call or send an email. If you are traveling to our Hospital for an
+				 			   appointment, confirm the correct street address with your appointment staff ahead of time to avoid
+				 			   frustration. For more help with specific addresses see below.
+				 			</p>
+
+				 			<div class="row">
+
+
+				 				<!-- CITY CONTACT DATA -->
+				 				<div class="col-md-6">
+				 					<div class="contact-box mb-40">
+				 						
+				 						<!-- City -->
+										<h5 class="h5-sm steelblue-color">India</h5>
+										<p> Infront of versova hospital, Near Sahil Vatika, Awleshpur</p> 
+										<p>Uttar Pradesh Varanasi 221010</p>
+										<p>Phone: +91-9634425888</p>
+										<p>Email: <a href="mailto:Katiyar.13abhi@gmail.com.com" class="blue-color">hello@Sunrisehospital.com</a></p>
+				 					</div>
+				 				</div>
+
+
+				 			
+
+
+				 				<!-- CITY CONTACT DATA -->
+				 				
+
+
+				 				<!-- CITY CONTACT DATA -->
+				 				
+
+
+							</div>
+						</div>	<!-- END CONTACTS INFO -->
+
+
+						<!-- CONTACT FORM -->	
+				 		<div class="col-lg-5">
+				 			<div class="form-holder mb-40">
+								<form   asp-action="Create">
+				                                            
+					                <!-- Contact Form Input -->
+					                <div  class="col-md-12">
+					                	<input type="text" asp-for="Name"   class="form-control " placeholder="Enter Your Name*" required> 
+										<span asp-validation-For="Name"  class="text-danger"></span> 
+					                </div>
+					                        
+					                <div  class="col-md-12">
+					                	<input type="text"  asp-for="Email" class="form-control " placeholder="Enter Your Email*" required> 
+										<span asp-validation-For="Email"  class="text-danger"></span> 
+					                </div>
+
+					                <div class="col-md-12">
+					                	<input type="tel" asp-for="PhoneNumber"   class="form-control " placeholder="Enter Your Phone Number*" required>
+										<span asp-validation-For="PhoneNumber"  class="text-danger"></span>  
+					                </div>	
+
+					                <!-- Form Select -->
+					                <div  class="col-md-12 input-patient">
+					                    <select id="inlineFormCustomSelect3"  class="custom-select patient" required asp-for="Haveuvisitbefore" >
+					                        <option value="">Have You Visited Us Before?*</option>
+											<option>New Patient</option>
+											<option>Returning Patient</option>
+											<option>Other</option>
+					                    </select>
+										<span asp-validation-For="Haveuvisitbefore"  class="text-danger"></span> 
+					                </div>
+
+					                <div  class="col-md-12">
+					                	<input type="text" asp-for="Subject"   class="form-control" placeholder="Subject*" required>
+										<span asp-validation-For="Subject"  class="text-danger"></span>  
+					                </div>					                          
+					                        
+					                <div  class="col-md-12 input-message">
+					                	<textarea class="form-control " asp-for="Message"   rows="6" placeholder="Your Message ..." required></textarea>
+										<span asp-validation-For="Message"  class="text-danger"></span> 
+					                </div> 
+					                                            
+					                <!-- Contact Form Button -->
+					                <div class="col-lg-12 mt-15 form-btn">  
+					                <button class="btn btn-blue blue-hover submit" value="Send">Submit </button>
+					                </div>
+					                                                              
+					                <!-- Contact Form Message -->
+					                <div class="col-md-12 contact-form-msg text-center">
+					                	<div class="sending-msg"><span class="loading"></span></div>
+					                </div>  
+				                      <h5>@ViewBag.msg</h5>                        
+				                </form> 
+				 			</div>	
+				 		</div> 	<!-- END CONTACT FORM -->	
+
+
+				 	</div>	<!-- End row -->			  
+				</div>	   <!-- End container -->		
+			</section>	<!-- END CONTACTS-2 -->
+
+
+
+
+			<!-- BANNER-8
+			============================================= -->
+			<section id="banner-8" class="bg-fixed banner-section division">
+				<div class="container white-color">
+			 		<div class="row d-flex align-items-center">
+
+
+			 			<!-- BANNER TEXT -->
+						<div class="col-lg-8 offset-lg-2">
+							<div class="banner-txt icon-lg text-center">
+
+								<!-- Icon  -->
+								<span class="flaticon-072-hospital-5"></span>
+
+								<!-- Title  -->
+								<h3 class="h3-sm">Take the First Step to Help</h3>
+								
+							    <h4 class="h4-lg">Call Sunrise Hospital Now</h4>
+							    <h2 class="h2-lg">+91 9634425888</h2>
+
+							</div>
+						</div>
+
+
+			 		</div>      <!-- End row -->
+				</div>	    <!-- End container -->		
+			</section>	<!-- END BANNER-8 -->
+ <div >
+                <div class="map">
+                <iframe width="1500" height="700" id="gmap_canvas" src="https://maps.google.com/maps?q=sunrise%20hospital%20awleshpur%20varanasi&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+            </div>
+      

@@ -1,0 +1,214 @@
+@model BookAppointment
+<div id="breadcrumb" class="division">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class=" breadcrumb-holder">
+
+                    <!-- Breadcrumb Nav -->
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a asp-Controller="Services" asp-Action="Index">Home</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Appointment</li>
+                        </ol>
+                    </nav>
+
+                    <!-- Title -->
+                    <h4 class="h4-sm steelblue-color">Appointment</h4>
+
+                </div>
+            </div>
+        </div>  <!-- End row -->
+    </div>	<!-- End container -->
+</div>	<!-- END BREADCRUMB -->
+<!-- APPOINTMENT PAGE
+============================================= -->
+<div  class="wide-60 appointment-page-section division">
+    <div class="container">
+        <div class="row">
+
+
+            <!-- SERVICE DETAILS -->
+            <div class="col-lg-8">
+                <div class="txt-block pr-30">
+
+                    <!-- Title -->
+                    <h3 class="h3-md steelblue-color">Book an Appointment</h3>
+
+                    <!-- Text -->
+                    <!-- APPOINTMENT FORM -->
+                    <div  class="text-center">
+                        <form asp-action="Create">
+
+                            <!-- Form Select -->
+                            <div class="col-md-12 input-Department">
+                                <select class="custom-select department" required asp-for="Department">
+                                    <option value="">Select Department</option>
+                                    <option>Pediatrics Department</option>
+                                    <option>Neurology Department</option>
+                                    <option>Orthopedic Department</option>
+                                    <option>Dentistry Department</option>
+                                    <option>Cardiology Department</option>
+                                    <option>ENT Department</option>
+                                    <option>Urology Department</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Form Select -->
+                            <div class="col-md-12 input-doctor">
+                                <select class="custom-select doctor" required asp-for="Doctor">
+                                    <option value="">Select Doctor</option>
+                                    <option>Dr Abhinav Katiyar</option>
+                                    <option>Dr Pragati Sachan</option>
+                                    <option>Dr A.K Pradhan</option>
+                                    <option>Dr P.S Verma</option>
+                                    <option>Dr Shekhar Puri</option>
+                                    <option>Dr Sudhakar Singh</option>
+                                    <option>Dr Vinit Yadav</option>
+                                    <option>Dr Dr Anupama Goyal</option>
+                                    <option>Dr  Vijaya Jha</option>
+                                    <option>Dr Ashish Singh</option>
+                                    <option>Dr Ravi Ranjan</option>
+                                    <option>Dr R.K Mishra</option>
+                                    <option>Dr Vineet Agrawal</option>
+                                    <option>Dr Neeraj Srivastava</option>
+                                    <option>Dr Arvind Kumar</option>
+                                    <option>Dr Manjari Gupta</option>
+                                    <option>Dr Pritam Kumar</option>
+                                    <option>Dr A.k Vishwakarma</option>
+                                    <option>Dr A.k Lal</option>
+
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Form Select -->
+                            <div class="col-md-12 input-patient">
+                                <select id="inlineFormCustomSelect3" class="custom-select patient" required asp-for="Haveuvisitbefore">
+                                    <option value="">Have You Visited Us Before?*</option>
+                                    <option>New Patient</option>
+                                    <option>Returning Patient</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Contact Form Input -->
+                            <div class="col-lg-12">
+                                <input id="datetimepicker" type="text" asp-for="Date" class="form-control " placeholder="Appointment Date" required>
+                            </div>
+
+                            <!-- Contact Form Input -->
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control name" asp-for="Name" placeholder="Enter Your Name*" required>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control email" asp-for="Email" placeholder="Enter Your Email*" required>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <input type="tel" class="form-control phone" asp-for="Number" placeholder="Enter Your Phone Number*" required>
+                            </div>
+
+                            <div class="col-lg-12 input-message">
+                                <textarea class="form-control message" asp-for="Message" rows="6" placeholder="Your Message ..."></textarea>
+                            </div>
+                            <br />
+                            <!-- Contact Form Button -->
+                            <div class="col-lg-12 form-btn">
+                                <button type="submit" class="btn btn-blue blue-hover submit" value="Create" >Request an Appointment</button>
+                            </div>
+
+                            <!-- Contact Form Message -->
+                            <div class="col-md-12 contact-form-msg text-center">
+                                <div class="sending-msg"><span class="loading"></span></div>
+                            </div>
+                            <h5>@ViewBag.msg</h5>
+
+                        </form>
+
+                    </div>	<!-- END APPOINTMENT FORM -->
+                    <!-- Text -->
+
+
+
+                </div>
+            </div>	<!-- END SERVICE DETAILS -->
+            <!-- SIDEBAR -->
+            <aside id="sidebar" class="col-lg-4">
+
+
+                <!-- TEXT WIDGET -->
+                <div id="txt-widget" class="sidebar-div mb-50">
+
+                    <!-- Title -->
+                    <h5 class="h5-sm steelblue-color">Sunrise Hospital</h5>
+
+                    <!-- Head of Clinic -->
+                    <div class="txt-widget-unit mb-15 clearfix d-flex align-items-center">
+
+                        <!-- Avatar -->
+                        <div class="txt-widget-avatar">
+                            <img src="images/dpsir.jpg" alt="testimonial-avatar">
+                        </div>
+
+                        <!-- Data -->
+                        <div class="txt-widget-data">
+                            <h5 class="h5-md steelblue-color">Dr. Abhinav Katiyar</h5>
+                            <span>Director</span>
+                            <p class="blue-color">+91 9634425888</p>
+                        </div>
+
+                    </div>	<!-- End Head of Clinic -->
+                    <!-- Text -->
+                    <!-- Button -->
+                    <a asp-Controller="DrAbhinavKatiyar" asp-Action="Index" class="btn btn-blue blue-hover">Learn More</a>
+
+                </div>
+
+                <!-- SIDEBAR TABLE -->
+                <div class="sidebar-table blue-table sidebar-div mb-50">
+
+                    <!-- Title -->
+                    <h5 class="h5-md">Working Time</h5>
+
+                    <!-- Text -->
+                    <!-- Table -->
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td>Mon – Wed</td>
+                                <td> - </td>
+                                <td class="text-right">9:00 AM - 10:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Thursday</td>
+                                <td> - </td>
+                                <td class="text-right">9:00 AM - 10:00 PM</td>
+                            </tr>
+                            <tr>
+                                <td>Fri - Sat </td>
+                                <td> - </td>
+                                <td class="text-right">9:00 AM - 10:00 PM</td>
+                            </tr>
+                            <tr class="last-tr">
+                                <td> Sun</td>
+                                <td>-</td>
+                                <td class="text-right">CLOSED</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Title -->
+
+
+                </div>	<!-- END SIDEBAR TABLE -->
+
+
+            </aside>   <!-- END SIDEBAR -->
+
+
+        </div>	<!-- End row -->
+    </div>	 <!-- End container -->
+</div>	<!-- END APPOINTMENT PAGE -->
